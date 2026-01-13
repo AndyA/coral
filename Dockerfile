@@ -14,6 +14,7 @@ RUN apt-get install -y \
   python3-pil          \
   python3-numpy        \
   apt-transport-https  \
+  lsb-release          \
   curl                 \
   strace               \
   git                  \
