@@ -1,7 +1,7 @@
 FROM debian:10
 
-WORKDIR /home
-ENV HOME=/home
+WORKDIR /home/coral
+ENV HOME=/home/coral
 RUN cd ~
 
 RUN echo "deb http://archive.debian.org/debian buster main" \
@@ -29,8 +29,11 @@ RUN echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" \
   > /etc/apt/sources.list.d/coral-edgetpu.list
 
 RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-
+  
 RUN apt-get update
 RUN apt-get install -y \
   libedgetpu1-std      \
   python3-pycoral
+
+# RUN useradd -m -u 1000 coral
+# USER coral
