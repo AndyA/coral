@@ -34,7 +34,3 @@ RUN apt-get update
 RUN apt-get install -y \
   libedgetpu1-std      \
   python3-pycoral
-
-RUN git clone https://github.com/google-coral/pycoral.git
-RUN cd pycoral && bash examples/install_requirements.sh classify_image.py
-COPY robin.jpg /home/pycoral/test_data/robin.jpg
