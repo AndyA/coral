@@ -3,9 +3,9 @@ name = "coral"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10,<3.11"
+requires-python = "==3.9.25"
 dependencies = [
-    "numpy>=2.2.6",
-    "pillow>=12.1.0",
+    "numpy>=2.0.2",
+    "pillow>=11.3.0",
     "pycoral>=0.2.0",
 ]

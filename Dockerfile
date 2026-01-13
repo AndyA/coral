@@ -1,12 +1,7 @@
-FROM debian:10
+FROM debian:11
 
 WORKDIR /home/coral
 ENV HOME=/home/coral
-
-RUN echo "deb http://archive.debian.org/debian buster main" \
-  > /etc/apt/sources.list
-RUN echo "deb http://archive.debian.org/debian-security buster/updates main" \
-  >> /etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -33,3 +28,5 @@ RUN apt-get update
 RUN apt-get install -y \
   libedgetpu1-std      \
   python3-pycoral
+
+RUN apt-get upgrade -y
