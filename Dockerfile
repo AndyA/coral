@@ -2,7 +2,6 @@ FROM debian:10
 
 WORKDIR /home/coral
 ENV HOME=/home/coral
-RUN cd ~
 
 RUN echo "deb http://archive.debian.org/debian buster main" \
   > /etc/apt/sources.list
