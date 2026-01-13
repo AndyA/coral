@@ -7,4 +7,5 @@ requires-python = ">=3.10,<3.11"
 dependencies = [
     "numpy>=2.2.6",
     "pillow>=12.1.0",
+    "pycoral>=0.2.0",
 ]

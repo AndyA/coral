@@ -12,7 +12,7 @@ RUN echo "deb http://archive.debian.org/debian-security buster/updates main" \
 RUN apt-get update
 RUN apt-get install -y \
   gnupg2               \
-  vim-tiny             \
+  vim                  \
   python3              \
   pkg-config           \
   usbutils             \
@@ -34,6 +34,3 @@ RUN apt-get update
 RUN apt-get install -y \
   libedgetpu1-std      \
   python3-pycoral
-
-# RUN useradd -m -u 1000 coral
-# USER coral
