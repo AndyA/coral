@@ -1,15 +1,16 @@
-Build the docker image:
+Build the podman image:
 
 ```sh
-docker build -t coral .
+podman build -t coral .
 ```
 
-Run it:
+And run it:
 
 ```sh
-docker run -it --rm           \
-  -v $PWD/pycoral:/home/coral \
+podman run -it --rm           \
+  -v $PWD/pycoral:/home/coral/pycoral \
   --device /dev/bus/usb       \
+  --group-add keep-groups     \
   coral bash
 ```
 
@@ -26,18 +27,4 @@ Or just:
 
 ```sh
 ./check.sh
-```
-
-You can also use podman:
-
-```sh
-podman build -t coral .
-```
-
-```sh
-podman run -it --rm           \
-  -v $PWD/pycoral:/home/coral \
-  --device /dev/bus/usb       \
-  --group-add keep-groups     \
-  coral bash
 ```

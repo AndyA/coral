@@ -31,3 +31,6 @@ RUN apt-get install -y \
   python3-pycoral
 
 RUN apt-get upgrade -y
+
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+RUN echo "source .profile" >> /home/coral/.bashrc
