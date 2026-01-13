@@ -7,10 +7,10 @@ podman build -t coral .
 And run it:
 
 ```sh
-podman run -it --rm           \
+podman run -it --rm                   \
   -v $PWD/pycoral:/home/coral/pycoral \
-  --device /dev/bus/usb       \
-  --group-add keep-groups     \
+  --device /dev/bus/usb               \
+  --group-add keep-groups             \
   coral bash
 ```
 
