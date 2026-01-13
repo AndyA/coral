@@ -7,7 +7,10 @@ docker build -t coral .
 Run it:
 
 ```sh
-docker run -it --rm -v $PWD/pycoral:/home/coral --device /dev/bus/usb:/dev/bus/usb coral bash
+docker run -it --rm           \
+  -v $PWD/pycoral:/home/coral \
+  --device /dev/bus/usb       \
+  coral bash
 ```
 
 Try it:
@@ -23,4 +26,18 @@ Or just:
 
 ```sh
 ./check.sh
+```
+
+You can also use podman:
+
+```sh
+podman build -t coral .
+```
+
+```sh
+podman run -it --rm           \
+  -v $PWD/pycoral:/home/coral \
+  --device /dev/bus/usb       \
+  --group-add keep-groups     \
+  coral bash
 ```
